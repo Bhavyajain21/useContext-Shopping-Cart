@@ -20,6 +20,10 @@ const Header = () => {
     productDispatch,
   } = CartState();
 
+  const handleCartDropDown = (e) => {
+    e.target.parentElement.parentElement.classList.remove("show");
+  };
+
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
@@ -77,7 +81,9 @@ const Header = () => {
                     </span>
                   ))}
                   <Link to="/cart">
-                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                    <Button
+                      onClick={handleCartDropDown}
+                      style={{ width: "95%", margin: "0 10px" }}>
                       Go To Cart
                     </Button>
                   </Link>

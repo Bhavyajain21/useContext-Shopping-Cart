@@ -46,8 +46,7 @@ const Cart = () => {
                           qty: e.target.value,
                         },
                       })
-                    }
-                  >
+                    }>
                     {[...Array(prod.inStock).keys()].map((x) => (
                       <option key={x + 1}>{x + 1}</option>
                     ))}
@@ -62,8 +61,7 @@ const Cart = () => {
                         type: "REMOVE_FROM_CART",
                         payload: prod,
                       })
-                    }
-                  >
+                    }>
                     <AiFillDelete fontSize="20px" />
                   </Button>
                 </Col>
